@@ -17,11 +17,11 @@ import java.util.Set;
 
 @Configuration
 public class MyDataRestConfig implements RepositoryRestConfigurer {
-    private EntityManager entitytManager;
+    private EntityManager entityManager;
 
     @Autowired
     public MyDataRestConfig(EntityManager theEntityManager){
-        entitytManager=theEntityManager;
+        entityManager=theEntityManager;
     }
 
     @Override
@@ -48,7 +48,7 @@ public class MyDataRestConfig implements RepositoryRestConfigurer {
         // expose entity ids
 
         // get a list of all entity classes from the entity manager
-        Set<EntityType<?>> entities = entitytManager.getMetamodel().getEntities();
+        Set<EntityType<?>> entities = entityManager.getMetamodel().getEntities();
         // create an array of the entity types
         List<Class> entityClasses = new ArrayList<>();
         // get the entity types for the entities
