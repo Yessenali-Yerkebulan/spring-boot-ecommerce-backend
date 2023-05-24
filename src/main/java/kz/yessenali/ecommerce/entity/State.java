@@ -1,9 +1,11 @@
 package kz.yessenali.ecommerce.entity;
 
 import jakarta.persistence.*;
+import lombok.Data;
 
 @Entity
 @Table(name="state")
+@Data
 public class State {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
